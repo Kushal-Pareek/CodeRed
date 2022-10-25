@@ -1,0 +1,64 @@
+#Simple Program to make an event registration form using python's tkinter GUI library. 
+
+%pip install tkinter
+from tkinter import * 
+
+window = Tk() #tkinter window 
+window.geometry("800x500")
+window.configure(background = "Light yellow")
+
+def getans():
+  print("Your form is successfully submitted. Thank you!!")
+
+Label(window, text="Event Registration Form",font =("Times New Roman" , 20, "bold"), bg = "light blue").grid(row = 0 , column = 6)
+
+name_val = StringVar()
+email_val = StringVar()
+phone_val = StringVar()
+gender_val = IntVar()
+country_val = StringVar()
+payment_val = StringVar()
+check_val = IntVar()
+
+name= Label(window,text="Name",bg = "Light yellow",font=("Ariel",18,"bold"))
+name.grid(row=1,column=5)
+
+email= Label(window,text="Email Id",bg = "Light yellow",font=("Ariel",18,"bold"))
+email.grid(row=2,column=5)
+
+phone= Label(window,text="Phone",bg = "Light yellow",font=("Ariel",18,"bold"))
+phone.grid(row=3,column=5)
+
+gender= Label(window,text="Gender",bg= "Light yellow",font=("Ariel",18,"bold"))
+gender.grid(row=4,column=5)
+radio_m = Radiobutton(window,text="MALE",padx=5,variable=gender_val,value=1).place(x=160,y=120)
+radio_m = Radiobutton(window,text="FEMALE",padx=15,variable=gender_val,value=2).place(x=240,y=120)
+
+country= Label(window,text="Country",bg = "Light yellow",font=("Ariel",18,"bold"))
+country.grid(row=5,column=5)
+
+payment= Label(window,text="Payment Mode ",bg = "Light yellow",font=("Ariel",18,"bold"))
+payment.grid(row=6,column=5)
+
+name_entry= Entry(window,textvariable= name_val)
+name_entry.grid(row=1,column=6)
+
+email_entry= Entry(window,textvariable= email_val)
+email_entry.grid(row=2,column=6)
+
+phone_entry= Entry(window,textvariable= phone_val)
+phone_entry.grid(row=3,column=6)
+
+country_entry= Entry(window,textvariable= country_val)
+country_entry.grid(row=5,column=6)
+
+payment_entry= Entry(window,textvariable= payment_val)
+payment_entry.grid(row=6,column=6)
+
+check = Checkbutton(window,text="Remeber me?", variable = check_val)
+check.grid(row=8,column=6)
+
+Button(text="SUBMIT",command=getans,font=("Ariel",17,"bold")).grid(row=10,column=6)
+
+window.mainloop()#acts as a ending line of program
+
