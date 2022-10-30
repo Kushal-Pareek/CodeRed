@@ -1,0 +1,60 @@
+<!--a tip calculator takes three parameters as input
+	1. Total bill amount(t)
+	2. Service rating(percentage)
+	3. Total number of persons(p)
+
+
+	tip is calculated by using the below formula
+	tip = (t*percentage)/p;
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tip calculator</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="app.js">
+	</script>
+</head>
+
+<body>
+   
+	<div class="container">
+		<h1>TIP CALCULATOR</h1>
+        <!-- a div class to get input from user-->
+		<div class="wrapper">
+            <p>Bill Amount</p>
+			<input type="text" id="amount" placeholder="Total bill amount"> ₹
+
+            <p>Rate the service</p>
+            <select id="services">
+				<option selected disabled hidden>
+					Select
+				</option>
+				<option value="0.25">25% - Excellent</option>
+				<option value="0.20">20% - Very Good</option>
+				<option value="0.15">15% - Good</option>
+				<option value="0.10">10% - Bad</option>
+				<option value="0.05">5% - Worst</option>
+			</select>
+
+            <p>Total number of persons</p>
+			<input type="text" id="persons" placeholder="Total number of people">
+			<button id="submit">Submit</button>
+		</div>
+
+        <!--a div class to display tip amount-->
+		<div class="tip">	
+                <p>Your Tip Amount</p>
+			    ₹ &nbsp;<span id="total">0</span>
+			    <span id="each">each</span>
+		</div>
+	</div>
+</body>
+
+</html>
