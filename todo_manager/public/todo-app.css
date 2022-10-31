@@ -1,0 +1,106 @@
+body {
+  font-family: sans-serif;
+  margin: 0 auto;
+  max-width: 460px;
+  margin-top: 60px;
+}
+.TodoPage-title {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #453c52;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.AddTodo {
+  display: flex;
+  height: 32px;
+  align-items: stretch;
+  margin-bottom: 24px;
+}
+.AddTodo-text {
+  padding: 6px 12px;
+  font-size: 14px;
+  color: #453c52;
+  margin-right: 10px;
+  border-radius: 4px;
+  border: 1px solid #bfb8cc;
+}
+.AddTodo-date {
+  padding: 6px;
+  font-size: 14px;
+  color: #453c52;
+  margin-right: 10px;
+  border-radius: 4px;
+  border: 1px solid #bfb8cc;
+}
+.AddTodo-button {
+  font-size: 14px;
+  color: white;
+  padding: 6px 12px;
+  background-color: #48bb78;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.TodoSection {
+  margin-bottom: 20px;
+}
+.TodoSectionTitle {
+  display: flex;
+  align-items: center;
+  color: #453c52;
+  margin-bottom: 8px;
+}
+.TodoSectionTitle-text {
+  font-size: 14px;
+  font-weight: 600;
+  margin-right: 8px;
+  line-height: 1.4;
+}
+.TodoSectionTitle-RemaningCount {
+  font-size: 12px;
+}
+ul {
+  list-style: none;
+}
+.TodoItem {
+  font-size: 14px;
+  margin-left: 8px;
+  margin-bottom: 6px;
+  color: #453c52;
+}
+.TodoItem-container {
+  display: flex;
+  padding: 2px 8px;
+  align-items: center;
+}
+.TodoItem-checkbox {
+  height: 16px;
+  width: 16px;
+  margin-right: 8px;
+}
+.TodoItem-overdueLabel {
+  margin-left: 10px;
+  color: #c53030;
+  font-size: 12px;
+}
+
+.TodoItem-delete {
+  visibility: hidden;
+  margin-left: 8px;
+}
+.TodoItem-container:hover {
+  background-color: #f1edf7;
+}
+
+.TodoItem-delete > img {
+  width: 16px;
+}
+.TodoItem-container:hover .TodoItem-delete {
+  visibility: visible;
+}
+
+.TodoItem-duetomorrowLabel {
+  margin-left: 10px;
+  color: #48bb78;
+  font-size: 12px;
+}

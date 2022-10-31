@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo Manager</title>
+    <link type="text/css" rel="stylesheet" href="todo-app.css" />
+  </head>
+  <body>
+    <h1 class="TodoPage-title">My Todo-List</h1>
+
+    <main class="TodoPageMain">
+    <%= form_with(url: "/todos", method: "post", class: "AddTodo") do %>
+        <%= text_field_tag "todo_text", nil, placeholder: "What's next?", class: "AddTodo-text" %>
+        <%= date_field_tag "due_date", nil, class: "AddTodo-date" %>
+        <%= submit_tag "Add", class: "AddTodo-button" %>
+
+      <% end %>
+
+
+    <%= render partial: "todo-section", locals: {
+                 section_title: "Overdue",
+                 todos: @todos.overdue,
+                 show_due_date: true,
+               } %>
+    <%= render partial: "todo-section", locals: {
+                 section_title: "Due Today",
+                 todos: @todos.due_today,
+                 show_due_date: false,
+               } %>
+    <%= render partial: "todo-section", locals: {
+                 section_title: "Due Later",
+                 todos: @todos.due_later,
+                 show_due_date: true,
+               } %>
+
+    </main>
+  </body>
+</html>
