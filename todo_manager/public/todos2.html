@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo Manager</title>
+    <link type="text/css" rel="stylesheet" href="todo-app.css" />
+  </head>
+  <body>
+    <h1 class="TodoPage-title">My Todo-List</h1>
+
+    <main class="TodoPageMain">
+      <section class="AddTodo">
+        <input class="AddTodo-text" type="text" placeholder="What's next?" />
+        <input class="AddTodo-date" type="date" />
+        <input class="AddTodo-button" type="button" value="Add" />
+      </section>
+      <section class="TodoSection">
+        <div class="TodoSectionTitle">
+          <p class="TodoSectionTitle-text">Overdue</p>
+          <p class="TodoSectionTitle-RemaningCount">0/4</p>
+        </div>
+        <ul>
+          <li class="TodoItem">
+            <div class="TodoItem-container">
+              <input class="TodoItem-checkbox" type="checkbox" />
+              Submit Saas 201 project
+              <p class="TodoItem-overdueLabel">Overdue</p>
+              <a class="TodoItem-delete" href="javascript:void(0)"
+                ><img src="delete.png" alt="delete-icon"
+              /></a>
+            </div>
+          </li>
+          <li class="TodoItem">
+            <div class="TodoItem-container">
+              <input class="TodoItem-checkbox" type="checkbox" />
+              Call Accountant
+              <p class="TodoItem-overdueLabel">Overdue</p>
+              <a class="TodoItem-delete" href="javascript:void(0)"
+                ><img src="delete.png" alt="delete-icon"
+              /></a>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="TodoSection">
+        <div class="TodoSectionTitle">
+          <p class="TodoSectionTitle-text">Due Today</p>
+          <p class="TodoSectionTitle-RemaningCount">0/4</p>
+        </div>
+        <ul>
+          <li class="TodoItem">
+            <div class="TodoItem-container">
+              <input class="TodoItem-checkbox" type="checkbox" />
+              Water The Plants
+              <a class="TodoItem-delete" href="javascript:void(0)"
+                ><img src="delete.png" alt="delete-icon"
+              /></a>
+            </div>
+          </li>
+          <li class="TodoItem">
+            <div class="TodoItem-container">
+              <input class="TodoItem-checkbox" type="checkbox" />
+              Refill groceries
+              <a class="TodoItem-delete" href="javascript:void(0)"
+                ><img src="delete.png" alt="delete-icon"
+              /></a>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="TodoSection">
+        <div class="TodoSectionTitle">
+          <p class="TodoSectionTitle-text">Due Tommorow</p>
+          <p class="TodoSectionTitle-RemaningCount">0/4</p>
+        </div>
+        <ul>
+          <li class="TodoItem">
+            <div class="TodoItem-container">
+              <input class="TodoItem-checkbox" type="checkbox" />
+              A line item
+              <p class="TodoItem-duetomorrowLabel">Due Tomorrow</p>
+              <a class="TodoItem-delete" href="javascript:void(0)"
+                ><img src="delete.png" alt="delete-icon"
+              /></a>
+            </div>
+          </li>
+          <li class="TodoItem">
+            <div class="TodoItem-container">
+              <input class="TodoItem-checkbox" type="checkbox" />
+              A line item
+              <p class="TodoItem-duetomorrowLabel">Due Tomorrow</p>
+              <a class="TodoItem-delete" href="javascript:void(0)"
+                ><img src="delete.png" alt="delete-icon"
+              /></a>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
