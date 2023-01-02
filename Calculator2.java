@@ -8,7 +8,7 @@ public class Calculator {
 
         System.out.print("Enter first number : ");
         number1 = input.nextDouble();
-        System.out.print("Enter operator (+, _, *, /)");
+        System.out.print("Enter operator (+, _, *, /,^)");
         operator = input.next().charAt(0);
         System.out.print("Enter second number : ");
         number2 = input.nextDouble();
@@ -31,6 +31,10 @@ public class Calculator {
                 result = number1 * number2;
                 System.out.println(number1 + " * " + number2 + " = " + result);
         }
+                case '^' ->{
+                result = Math.pow(number1,number2);
+                 System.out.println(number1 + "^" + number2 + " = " + result);
+                }
     }
 }
 }
